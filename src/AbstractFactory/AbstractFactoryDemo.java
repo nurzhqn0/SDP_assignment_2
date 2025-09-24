@@ -7,10 +7,6 @@ import AbstractFactory.settings.GameThemeProvider;
 public class AbstractFactoryDemo {
 
     public static void main(String[] args) {
-        System.out.println("Abstract Factory Pattern Demo - Gaming Platform System");
-        System.out.println("======================================================");
-
-        // Test all game themes
         GameThemeProvider.Theme[] themes = {
                 GameThemeProvider.Theme.FANTASY,
                 GameThemeProvider.Theme.SCIFI,
@@ -28,7 +24,6 @@ public class AbstractFactoryDemo {
             gameSession.demonstrateThemeConsistency();
         }
 
-        // Test string-based factory selection
         System.out.println("\n" + "=".repeat(60));
         System.out.println("Testing String-based Factory Selection");
         System.out.println("=".repeat(60));
@@ -40,7 +35,6 @@ public class AbstractFactoryDemo {
             System.err.println("Error: " + e.getMessage());
         }
 
-        // Test error handling
         System.out.println("\n=== Error Handling Test ===");
         try {
             GameThemeProvider.getFactory((GameThemeProvider.Theme) null);

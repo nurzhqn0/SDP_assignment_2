@@ -30,7 +30,6 @@ public class GameThemeProvider {
         }
     }
 
-    // Get factory by string name
     public static GameThemeFactory getFactory(String themeName) {
         if (themeName == null || themeName.trim().isEmpty()) {
             throw new IllegalArgumentException("Theme name cannot be null or empty");

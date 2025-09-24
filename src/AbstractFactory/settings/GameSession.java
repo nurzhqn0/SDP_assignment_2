@@ -19,7 +19,6 @@ public class GameSession {
     private void initializeGame() {
         System.out.println("Initializing game with " + themeFactory.getThemeName());
 
-        // Create all game components from the same factory family
         character = themeFactory.createCharacter();
         weapon = themeFactory.createWeapon();
         environment = themeFactory.createEnvironment();
@@ -29,18 +28,15 @@ public class GameSession {
         System.out.println("\n=== Starting Game Session ===");
         System.out.println("Theme: " + themeFactory.getThemeName());
 
-        // Setup environment
         System.out.println("\n--- Environment Setup ---");
         environment.render();
         environment.playBackgroundMusic();
         environment.setWeatherEffect();
 
-        // Character introduction
         System.out.println("\n--- Character Introduction ---");
         System.out.println("Player character: " + character.getCharacterType());
         System.out.println("Equipped weapon: " + weapon.getWeaponType() + " (Damage: " + weapon.getDamage() + ")");
 
-        // Simulate gameplay
         System.out.println("\n--- Combat Simulation ---");
         character.attack();
         weapon.strike();
